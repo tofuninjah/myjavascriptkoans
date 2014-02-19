@@ -18,14 +18,19 @@ function SwedishChef(age, hobby, mood) {
 
 SwedishChef.prototype = new Muppet();
 
+
 describe("About inheritance", function() {
+
   beforeEach(function(){
     this.muppet = new Muppet(2, "coding");
-	this.swedishChef = new SwedishChef(2, "cooking", "chillin");
+    this.swedishChef = new SwedishChef(2, "cooking", "chillin");
   });
 
   it("should be able to call a method on the derived object", function() {
-    expect(this.swedishChef.cook()).toEqual(FILL_ME_IN);
+    expect(this.swedishChef.cook()).toEqual("Mmmm soup!");
+    console.log(this.muppet);
+    console.log(this.swedishChef);
+    debugger;
   });
 
   it("should be able to call a method on the base object", function() {
@@ -41,6 +46,9 @@ describe("About inheritance", function() {
     expect(this.swedishChef.mood).toEqual(FILL_ME_IN);
   });
 });
+
+/*****
+
 
 // http://javascript.crockford.com/prototypal.html
 Object.prototype.beget = function () {
@@ -82,4 +90,8 @@ describe("About Crockford's inheritance improvement", function() {
   it("should set constructor parameters on the derived object", function() {
     expect(this.gonzo.trick).toEqual(FILL_ME_IN);
   });
+
 });
+
+
+********/
