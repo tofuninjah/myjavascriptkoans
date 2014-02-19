@@ -30,6 +30,11 @@ describe("About inheritance", function() {
     expect(this.swedishChef.cook()).toEqual("Mmmm soup!");
     console.log(this.muppet);
     console.log(this.swedishChef);
+
+    console.log(this.swedishChef.age);
+    console.log(this.swedishChef.hobby);
+    console.log(this.muppet.age);
+    console.log(this.muppet.hobby);
     debugger;
   });
 
