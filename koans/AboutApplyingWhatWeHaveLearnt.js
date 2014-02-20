@@ -85,11 +85,14 @@ describe("About Applying What We Have Learnt", function() {
    it("should count the ingredient occurrence (imperative)", function () {
     var ingredientCount = { "{ingredient name}": 0 };
 
+
     for (i = 0; i < products.length; i+=1) {
         for (j = 0; j < products[i].ingredients.length; j+=1) {
             ingredientCount[products[i].ingredients[j]] = (ingredientCount[products[i].ingredients[j]] || 0) + 1;
         }
     }
+
+    console.log(ingredientCount);
 
     expect(ingredientCount['mushrooms']).toBe(2);
   });
